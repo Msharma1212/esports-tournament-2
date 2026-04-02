@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "../styles/design-tokens.css";
+
+@font-face {
+  font-family: "Ultimatum Heavy";
+  src: url("/fonts/cc-ultimatum-heavy.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Winner Sans";
+  src: url("/fonts/WinnerSans-CondBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: var(--text);
+    background:
+      radial-gradient(circle at top, rgba(249, 115, 22, 0.07), transparent 22%),
+      linear-gradient(to bottom, #fffdf6 0%, #fffaf0 44%, #fffefb 100%);
+    font-family: var(--font-sans);
+  }
+}
+
+.hero-cta-container {
+  container-type: inline-size;
+  container-name: hero;
+}
