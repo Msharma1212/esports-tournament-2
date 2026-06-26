@@ -1,4 +1,6 @@
-# 🎮 JEC Esports – Full Stack Tournament Management Platform
+<p align="center">
+  <img src="./screenshots/banner.png" alt="JEC Esports Banner" width="100%">
+</p>
 
 <div align="center">
 
