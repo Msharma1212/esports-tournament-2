@@ -571,6 +571,162 @@ The application has been manually tested for major user workflows including:
 
 ---
 
+# 📸 Application Preview
+
+The following screenshots provide a walkthrough of the major modules of the platform.
+
+---
+
+## 🏠 Home Page
+
+The landing page introduces the platform and allows users to navigate through tournaments, games, authentication, FAQs, and other important sections.
+
+![Home](./screenshots/home_page.png)
+
+---
+
+## 🎮 Games
+
+Browse all available esports titles and explore tournaments associated with each game.
+
+Features:
+- Supported Games
+- Game Details
+- Tournament Availability
+
+![Games](./screenshots/games_page.png)
+
+---
+
+## 👤 User Dashboard
+
+A personalized dashboard where users can manage their account and track platform activities.
+
+Features:
+
+- Wallet Balance
+- Tournament History
+- Profile Information
+- Statistics
+- Recent Activity
+
+![Dashboard](./screenshots/user_dashboard.png)
+
+---
+
+## 💰 Wallet & Transactions
+
+The wallet module enables users to deposit coins, withdraw balance, and view complete transaction history.
+
+Features:
+
+- Wallet Balance
+- Deposit Coins
+- Withdraw Coins
+- Transaction History
+- Payment Tracking
+
+![Transactions](./screenshots/user_transactions.png)
+
+---
+
+## 📝 User Authentication
+
+### Login
+
+Secure authentication system for registered users.
+
+Features:
+
+- Email Login
+- Password Authentication
+- Secure Session
+
+![Sign In](./screenshots/sign_in.png)
+
+---
+
+### Registration
+
+Allows new users to create an account and join the platform.
+
+Features:
+
+- User Registration
+- Account Creation
+- Validation
+- Authentication
+
+![Sign Up](./screenshots/sign_up.png)
+
+---
+
+## 👨‍💻 About & FAQ
+
+Provides platform information, frequently asked questions, developer details, and useful resources.
+
+Features:
+
+- About Platform
+- FAQs
+- Developer Information
+- Social Links
+
+![Developer](./screenshots/developer_info.png)
+
+---
+
+# 👨‍💼 Admin Panel
+
+A dedicated administration dashboard for complete platform management.
+
+The admin panel provides centralized control over tournaments, users, wallets, and transactions.
+
+Major functionalities include:
+
+- Tournament Management
+- User Management
+- Deposit Verification
+- Withdrawal Approval
+- Wallet Monitoring
+- Analytics Dashboard
+- Platform Administration
+
+![Admin](./screenshots/admin_panel.png)
+
+---
+
+## 👥 Existing Users
+
+Displays all registered users with their account information.
+
+Admin can:
+
+- Search Users
+- View Profiles
+- Monitor Activity
+- Manage Accounts
+
+![Existing Users](./screenshots/existing_user.png)
+
+---
+
+## 👤 User Details
+
+Detailed profile page containing complete information about an individual user.
+
+Includes:
+
+- Personal Information
+- Wallet Details
+- Tournament Participation
+- Transactions
+- Activity Logs
+
+![User Details](./screenshots/user_details.png)
+
+---
+
 # 💼 Recruiter Highlights
 
 This project demonstrates hands-on experience with:
