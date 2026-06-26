@@ -104,3 +104,304 @@ The application reduces manual work, improves transparency, and provides a scala
 - Responsive Design
 - Production Deployment
 - Scalable Backend
+
+---
+
+# 🏗️ System Architecture
+
+```mermaid
+graph TD
+
+A[👤 Player/Admin]
+
+B[🌐 Next.js Frontend]
+
+C[🔐 Authentication]
+
+D[⚡ REST APIs]
+
+E[🟢 Business Logic]
+
+F[(🗄 PostgreSQL Database)]
+
+G[📊 Admin Dashboard]
+
+H[💰 Wallet System]
+
+I[🏆 Tournament Engine]
+
+A --> B
+B --> C
+C --> D
+D --> E
+
+E --> F
+
+E --> G
+E --> H
+E --> I
+
+F --> E
+E --> B
+B --> A
+```
+
+---
+
+# 🔄 Application Workflow
+
+```text
+User Registration
+        │
+        ▼
+Email / Login Authentication
+        │
+        ▼
+User Dashboard
+        │
+        ├──────────────► Wallet
+        │                     │
+        │                     ▼
+        │             Deposit / Withdraw
+        │                     │
+        │                     ▼
+        │              Transaction History
+        │
+        ▼
+Browse Tournaments
+        │
+        ▼
+Join Tournament
+        │
+        ▼
+Tournament Starts
+        │
+        ▼
+Winner Selection
+        │
+        ▼
+Reward Distribution
+```
+
+---
+
+# 👥 User Roles
+
+## 🎮 Player
+
+Players can perform the following operations:
+
+- Create Account
+- Secure Login
+- Manage Profile
+- Browse Available Games
+- Join Tournaments
+- Deposit Coins
+- Withdraw Coins
+- View Wallet Balance
+- View Transaction History
+- Track Tournament Participation
+
+---
+
+## 👨‍💼 Admin
+
+Administrators have platform management privileges.
+
+Responsibilities include:
+
+- Create Tournament
+- Update Tournament
+- Delete Tournament
+- Manage Players
+- Verify Deposits
+- Approve Withdrawals
+- Monitor Transactions
+- Platform Analytics
+- Manage Wallet Requests
+
+---
+
+## 👑 Master Admin
+
+Highest privilege level.
+
+Additional permissions:
+
+- Manage Admin Accounts
+- Global Platform Control
+- Security Configuration
+- Complete Database Access
+- Platform Monitoring
+
+---
+
+# 🧩 Project Modules
+
+The application is divided into multiple independent modules.
+
+| Module | Description |
+|----------|------------|
+| Authentication | User Registration & Login |
+| Tournament | Tournament Management |
+| Wallet | Coin Deposit & Withdraw |
+| Transactions | Payment History |
+| Dashboard | User Dashboard |
+| Admin Panel | Platform Administration |
+| User Management | Manage Registered Users |
+| Security | Authentication & Authorization |
+
+---
+
+# 🛠️ Technology Stack
+
+## Frontend
+
+| Technology | Purpose |
+|------------|----------|
+| Next.js | React Framework |
+| React | UI Components |
+| TypeScript | Type Safety |
+| CSS | Styling |
+
+---
+
+## Backend
+
+| Technology | Purpose |
+|------------|----------|
+| Next.js API Routes | Backend APIs |
+| Node.js | Runtime Environment |
+
+---
+
+## Database
+
+| Technology | Purpose |
+|------------|----------|
+| PostgreSQL | Relational Database |
+| Supabase | Database + Authentication |
+
+---
+
+## Tools
+
+| Tool | Usage |
+|------|-------|
+| Git | Version Control |
+| GitHub | Repository Management |
+| Vercel | Deployment |
+| npm | Package Management |
+
+---
+
+# 📂 Project Structure
+
+```
+app/
+│
+├── api/                 → Backend API Routes
+├── admin/               → Admin Dashboard
+├── auth/                → Login & Registration
+├── dashboard/           → User Dashboard
+├── tournaments/         → Tournament Pages
+├── wallet/              → Wallet Module
+├── profile/             → User Profile
+├── transactions/        → Transaction History
+├── components/          → Reusable Components
+├── hooks/               → Custom Hooks
+├── utils/               → Utility Functions
+├── styles/              → Styling Files
+│
+lib/
+│
+├── auth/                → Authentication Logic
+├── database/            → Database Queries
+├── store/               → Business Logic
+├── helpers/             → Helper Functions
+│
+public/
+│
+├── images/
+├── icons/
+├── assets/
+```
+
+---
+
+# 🗄 Database Design
+
+The project uses **Supabase PostgreSQL** as the primary relational database.
+
+Main entities include:
+
+- Users
+- Wallet
+- Transactions
+- Tournament
+- Admin
+- Deposits
+- Withdrawals
+- Rewards
+
+The database is designed using relational architecture to maintain consistency between users, tournaments, wallets, and transaction records.
+
+---
+
+# 🔐 Authentication Flow
+
+```text
+Register
+      │
+      ▼
+Create User
+      │
+      ▼
+Store User Details
+      │
+      ▼
+Login
+      │
+      ▼
+Verify Credentials
+      │
+      ▼
+Generate Session
+      │
+      ▼
+Access Dashboard
+```
+
+---
+
+# 💰 Wallet Flow
+
+```text
+User
+ │
+ ▼
+Wallet Dashboard
+ │
+ ├────────► Deposit Coins
+ │               │
+ │               ▼
+ │        Admin Verification
+ │               │
+ │               ▼
+ │        Wallet Updated
+ │
+ ▼
+Join Tournament
+ │
+ ▼
+Entry Fee Deducted
+ │
+ ▼
+Tournament Ends
+ │
+ ▼
+Reward Credited
+ │
+ ▼
+Transaction Recorded
+```
