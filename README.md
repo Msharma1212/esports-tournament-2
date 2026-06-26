@@ -405,3 +405,270 @@ Reward Credited
  ▼
 Transaction Recorded
 ```
+
+---
+
+# 📡 REST API Overview
+
+The platform follows a REST-based architecture where the frontend communicates with backend API routes to perform authentication, tournament management, wallet operations, and transaction processing.
+
+### Authentication APIs
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/api/auth/register` | Register a new user |
+| POST | `/api/auth/login` | Authenticate user |
+| POST | `/api/auth/logout` | Logout current user |
+
+---
+
+### Tournament APIs
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/api/tournaments` | Fetch all tournaments |
+| GET | `/api/tournaments/:id` | Get tournament details |
+| POST | `/api/tournaments/join` | Join a tournament |
+| POST | `/api/tournaments/create` | Create tournament (Admin) |
+| PUT | `/api/tournaments/update` | Update tournament |
+| DELETE | `/api/tournaments/delete` | Delete tournament |
+
+---
+
+### Wallet APIs
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/api/wallet` | Fetch wallet balance |
+| POST | `/api/wallet/deposit` | Deposit coins |
+| POST | `/api/wallet/withdraw` | Withdraw coins |
+| GET | `/api/transactions` | View transaction history |
+
+---
+
+# 🗄️ Database Overview
+
+The platform uses **Supabase PostgreSQL** as its primary relational database.
+
+### Main Tables
+
+- Users
+- Wallets
+- Transactions
+- Tournaments
+- Tournament Participants
+- Admins
+- Rewards
+- Deposits
+- Withdrawals
+
+---
+
+## Entity Relationship
+
+```mermaid
+erDiagram
+
+USERS ||--|| WALLETS : owns
+USERS ||--o{ TRANSACTIONS : performs
+USERS ||--o{ TOURNAMENTS : joins
+ADMINS ||--o{ TOURNAMENTS : manages
+TOURNAMENTS ||--o{ REWARDS : generates
+WALLETS ||--o{ TRANSACTIONS : records
+```
+
+---
+
+# 🔒 Security Features
+
+Security was considered throughout the development of the application.
+
+### Authentication
+
+- Secure Login
+- Protected Routes
+- Session Validation
+- User Authorization
+
+### Authorization
+
+- Role-Based Access Control (RBAC)
+- Admin Protected Pages
+- Master Admin Privileges
+- Restricted API Access
+
+### Database Security
+
+- Parameterized SQL Queries
+- Input Validation
+- Secure Database Access
+- Transaction Integrity
+
+---
+
+# ⚡ Performance Optimizations
+
+Several optimizations have been implemented to improve scalability and user experience.
+
+- Component Reusability
+- Modular Code Structure
+- Optimized Database Queries
+- Efficient API Calls
+- Lazy Loaded Components
+- Optimized Asset Loading
+- Responsive UI
+- Code Splitting using Next.js
+
+---
+
+# 📱 Responsive Design
+
+The platform is fully responsive and optimized for multiple screen sizes.
+
+Supported devices:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+---
+
+# 🌍 Time Management
+
+All timestamps are stored in **UTC** inside the database.
+
+During rendering, timestamps are converted into the user's local timezone (IST) for better readability and consistency.
+
+---
+
+# 🚀 Deployment
+
+The application is deployed on **Vercel** with Supabase as the backend service.
+
+Deployment includes:
+
+- Automatic Builds
+- Production Environment
+- HTTPS Support
+- Continuous Deployment
+- GitHub Integration
+
+---
+
+# 🧪 Testing
+
+The application has been manually tested for major user workflows including:
+
+- User Registration
+- Login & Logout
+- Wallet Operations
+- Tournament Registration
+- Admin Operations
+- Transaction History
+- Responsive Layout
+- Route Protection
+
+---
+
+# 💼 Recruiter Highlights
+
+This project demonstrates hands-on experience with:
+
+- Full Stack Web Development
+- Authentication & Authorization
+- REST API Development
+- PostgreSQL Database Design
+- Supabase Integration
+- Role-Based Access Control
+- Modular Architecture
+- Production Deployment
+- Version Control using Git
+- Scalable Application Design
+
+---
+
+# 🧠 Key Learnings
+
+This project helped strengthen my understanding of:
+
+- Next.js Application Architecture
+- React Component Design
+- TypeScript
+- REST API Development
+- Authentication Flow
+- Database Relationships
+- SQL Query Optimization
+- Role-Based Access Control
+- Git Workflow
+- Production Deployment
+
+---
+
+# 🔮 Future Enhancements
+
+The following features are planned for future releases:
+
+- Live Match Tracking
+- Real-Time Notifications
+- Discord Integration
+- Tournament Brackets
+- Team Management
+- AI-based Match Prediction
+- Global Leaderboards
+- Achievement System
+- Push Notifications
+- Mobile Application
+- Payment Gateway Integration
+- Dark Mode
+
+---
+
+# 🤝 Contribution
+
+Contributions, feature suggestions, and improvements are always welcome.
+
+If you would like to contribute:
+
+1. Fork the repository
+2. Create a new feature branch
+3. Commit your changes
+4. Push the branch
+5. Create a Pull Request
+
+---
+
+# 👨‍💻 Developer
+
+## Mayank Sharma
+
+Information Technology Graduate
+
+**Skills**
+
+- Full Stack Development
+- React.js
+- Next.js
+- TypeScript
+- Node.js
+- PostgreSQL
+- Supabase
+- REST APIs
+
+---
+
+# ⭐ Support
+
+If you found this project useful,
+
+⭐ Star the repository
+
+🍴 Fork the project
+
+💬 Share your feedback
+
+---
+
+# 📄 License
+
+This project is intended for educational and portfolio purposes.
